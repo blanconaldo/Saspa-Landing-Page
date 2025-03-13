@@ -1,28 +1,37 @@
-import React from 'react'
-import './globals.css'
-import { Inter, Playfair_Display } from 'next/font/google'
+import type React from "react"
+import type { Metadata } from "next"
+import { Inter, Playfair_Display } from "next/font/google"
+import "./globals.css"
+import Header from "@/components/header"
+import Footer from "@/components/footer"
 
-const inter = Inter({ subsets: ['latin'] })
-const playfair = Playfair_Display({ 
-  subsets: ['latin'],
-  variable: '--font-playfair',
-  display: 'swap',
+const inter = Inter({ subsets: ["latin"], variable: "--font-inter" })
+const playfair = Playfair_Display({
+  subsets: ["latin"],
+  variable: "--font-playfair",
 })
 
-export const metadata = {
-  title: 'SASPA - Modern Space-Saving Furniture',
-  description: 'Discover innovative space-saving furniture solutions for modern living at SASPA.',
+export const metadata: Metadata = {
+  title: "Sofa Set | Modern Furniture",
+  description: "We combine interior and exterior design service and often provide them as a single solution.",
 }
 
 export default function RootLayout({
   children,
-}: {
+}: Readonly<{
   children: React.ReactNode
-}) {
+}>) {
   return (
     <html lang="en">
-      <body className={`${inter.className} ${playfair.variable}`}>{children}</body>
+      <body className={`${inter.variable} ${playfair.variable} font-sans`}>
+        <div className="min-h-screen flex flex-col">
+          <Header />
+          <main className="flex-grow">{children}</main>
+          <Footer />
+        </div>
+      </body>
     </html>
   )
 }
+
 

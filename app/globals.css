@@ -2,41 +2,82 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 255, 255, 255;
-  --background-start-rgb: 0, 0, 0;
-  --background-end-rgb: 0, 0, 0;
-}
+@layer base {
+  :root {
+    --background: 36 33% 94%;
+    --foreground: 40 10% 25%;
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+    --card: 36 33% 97%;
+    --card-foreground: 40 10% 25%;
+
+    --popover: 36 33% 97%;
+    --popover-foreground: 40 10% 25%;
+
+    --primary: 36 33% 94%;
+    --primary-foreground: 40 10% 25%;
+
+    --secondary: 195 70% 40%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 36 20% 90%;
+    --muted-foreground: 40 5% 45%;
+
+    --accent: 36 30% 85%;
+    --accent-foreground: 40 10% 25%;
+
+    --destructive: 0 85% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 36 20% 85%;
+    --input: 36 20% 85%;
+    --ring: 40 10% 25%;
+
+    --radius: 0.5rem;
+  }
 }
 
 @layer base {
+  * {
+    @apply border-border;
+  }
   body {
-    @apply antialiased;
+    @apply bg-background text-foreground;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-playfair;
   }
 }
 
 @layer components {
-  .btn {
-    @apply bg-orange-500 text-black px-6 py-3 rounded-full text-lg font-semibold hover:bg-orange-600 transition-colors;
+  .container-custom {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
   }
-  
-  .font-playfair {
-    font-family: var(--font-playfair);
-  }
-}
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+  .btn-primary {
+    @apply bg-secondary text-white px-6 py-2 rounded-md hover:bg-secondary/90 transition-colors;
+  }
+
+  .btn-secondary {
+    @apply bg-accent text-foreground px-6 py-2 rounded-md hover:bg-accent/90 transition-colors;
+  }
+
+  .section-title {
+    @apply text-2xl md:text-3xl font-playfair font-medium text-foreground mb-6;
+  }
+
+  .section-divider {
+    @apply flex items-center justify-center gap-4 my-8;
+  }
+
+  .section-divider::before,
+  .section-divider::after {
+    content: "";
+    @apply block w-16 h-0.5 bg-muted;
   }
 }
 

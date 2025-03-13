@@ -6,7 +6,7 @@ const nextConfig = {
       'www.organizedinteriors.com',
       'rigstudio.international',
       'www.nismaayadecor.in',
-      'hebbkxlanhila5yf.public.blob.vercel-storage.com',
+      'hebbkxlanhila5yf.public.blob.vercel-storage.com'
     ],
   },
   output: 'standalone',  // Add this line
