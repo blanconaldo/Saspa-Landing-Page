@@ -4,18 +4,24 @@ import { notFound } from "next/navigation"
 import { ArrowLeft, Minus, Plus, ShoppingCart } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { products } from "@/lib/data"
+import {JSX} from "react";
 
-interface ProductPageProps {
-  params: {
-    id: string
-  }
-}
+// interface ProductPageProps {
+//   params: {
+//     id: string
+//   }
+// }
 
-export default function ProductPage({ params }: ProductPageProps) {
-  const product = products.find((p) => p.id === params.id)
+export default async function ProductPage({
+  params
+}: {
+  params: Promise<{ id: string }>
+}): Promise<JSX.Element> {
+  const resolvedParams = await params;
+  const product = products.find(p => p.id === resolvedParams.id);
 
   if (!product) {
-    notFound()
+    notFound();
   }
 
   return (
