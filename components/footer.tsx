@@ -89,7 +89,7 @@ export default function Footer() {
         </div>
 
         <div className="mt-8 pt-8 border-t border-muted text-center text-sm">
-          <p>copyright 2025 by sofaset. All rights reserved.</p>
+          <p>copyright 2025 by SASPA. All rights reserved.</p>
         </div>
       </div>
     </footer>

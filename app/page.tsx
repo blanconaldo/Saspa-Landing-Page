@@ -32,10 +32,10 @@ export default function Home() {
             <div className="relative">
               <div className="absolute top-0 right-0 w-64 h-64 rounded-full bg-accent -z-10 translate-x-1/4 -translate-y-1/4"></div>
               <Image
-                src="https://t3.ftcdn.net/jpg/10/17/52/62/360_F_1017526204_vOm0dhkcJVxi7BMf3OZxEMtx6Ro9H0h9.jpg"
+                src="/sofa2.png"
                 alt="Modern wall bed"
-                width={600}
-                height={400}
+                width={500}
+                height={500}
                 className="relative z-10"
               />
             </div>

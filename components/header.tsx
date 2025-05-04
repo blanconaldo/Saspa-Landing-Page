@@ -14,7 +14,7 @@ export default function Header() {
       <div className="container-custom">
         <div className="flex items-center justify-between">
           <Link href="/" className="font-playfair italic text-xl">
-            sofa set
+            SASPA
           </Link>
 
           {/* Mobile menu button */}
