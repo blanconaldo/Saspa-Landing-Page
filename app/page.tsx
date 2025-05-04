@@ -20,7 +20,7 @@ export default function Home() {
                 Furniture
               </h1>
               <p className="text-muted-foreground mb-8 max-w-md">
-                we combine interior and exterior design service and often provide them as a single solution.
+                We combine interior and exterior design service and often provide them as a single solution.
               </p>
               <div className="flex flex-wrap gap-4">
                 <Button className="bg-secondary text-white hover:bg-secondary/90">Start Now</Button>
@@ -31,13 +31,13 @@ export default function Home() {
             </div>
             <div className="relative">
               <div className="absolute top-0 right-0 w-64 h-64 rounded-full bg-accent -z-10 translate-x-1/4 -translate-y-1/4"></div>
-              {/*<Image*/}
-              {/*  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202025-03-07%20at%2005.49.38_7c4588f7.jpg-Wrn0689kPOvjzGmqQRm1WOnIHFUmrk.jpeg"*/}
-              {/*  alt="Modern blue sofa"*/}
-              {/*  width={600}*/}
-              {/*  height={400}*/}
-              {/*  className="relative z-10"*/}
-              {/*/>*/}
+              <Image
+                src="https://t3.ftcdn.net/jpg/10/17/52/62/360_F_1017526204_vOm0dhkcJVxi7BMf3OZxEMtx6Ro9H0h9.jpg"
+                alt="Modern wall bed"
+                width={600}
+                height={400}
+                className="relative z-10"
+              />
             </div>
           </div>
         </div>
